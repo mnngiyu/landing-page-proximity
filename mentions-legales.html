@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Proximity — Mentions légales</title>
+  <meta name="description" content="Mentions légales du site Proximity." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+
+<header class="header">
+  <div class="container header__inner">
+    <a class="brand" href="./index.html">
+      <img src="./assets/images/logo.svg" alt="Logo Proximity" class="brand__logo" />
+      <span class="brand__name">Proximity</span>
+    </a>
+
+    <nav class="nav">
+      <a href="./index.html#features">Fonctionnalités</a>
+      <a href="./index.html#newsletter">Pré-lancement</a>
+      <a href="./abonnements.html">Abonnements</a>
+      <a href="./faq.html">FAQ</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<section class="hero">
+  <div class="hero__bg"></div>
+  <div class="container hero__inner">
+    <div class="hero__content">
+      <p class="pill">Informations légales</p>
+      <h1>Mentions légales</h1>
+      <p class="lead">
+        Conformément à la loi n°2004-575 du 21 juin 2004 pour la confiance dans l’économie numérique.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="newsletter" style="max-width:900px;margin:auto">
+
+      <h2>1. Éditeur du site</h2>
+      <p>
+        Le site <strong>Proximity</strong> est édité par :
+      </p>
+
+      <p>
+        <strong>PROXIMITY</strong><br>
+        Société par actions simplifiée (SASU)<br>
+        Capital social : 1 000 €<br>
+        RCS Marseille : 999 361 017<br>
+        Numéro SIRET : 999 361 017 00017<br>
+        Siège social : 25 Lotissement la Comtesse, 13400 Aubagne<br>
+        Email : contact@proximityapp.fr
+      </p>
+
+      <p>
+        Directeur de la publication : <strong>Romain DONADEY</strong>, Président.
+      </p>
+
+      <h2>2. Hébergement</h2>
+      <p>
+        Le site est hébergé par :
+      </p>
+      <p>
+        Netlify, Inc.<br>
+        44 Montgomery Street, Suite 300<br>
+        San Francisco, California 94104<br>
+        États-Unis
+      </p>
+
+      <h2>3. Propriété intellectuelle</h2>
+      <p>
+        L’ensemble des contenus présents sur le site (textes, visuels, logo, graphismes, structure)
+        est la propriété exclusive de PROXIMITY, sauf mention contraire.
+      </p>
+      <p>
+        Toute reproduction, représentation, modification ou exploitation, totale ou partielle,
+        sans autorisation préalable est strictement interdite.
+      </p>
+
+      <h2>4. Responsabilité</h2>
+      <p>
+        PROXIMITY s’efforce de fournir des informations aussi précises que possible.
+        Toutefois, elle ne pourra être tenue responsable des omissions,
+        inexactitudes ou carences dans la mise à jour.
+      </p>
+
+      <h2>5. Données personnelles</h2>
+      <p>
+        Les informations collectées via le site sont traitées conformément à la
+        <a href="./politique-confidentialite.html">Politique de confidentialité</a>.
+      </p>
+
+      <h2>6. Droit applicable</h2>
+      <p>
+        Les présentes mentions légales sont soumises au droit français.
+        En cas de litige, compétence exclusive est attribuée aux tribunaux compétents.
+      </p>
+
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <div class="brand brand--footer">
+      <img src="./assets/images/logo.svg" alt="Proximity" class="brand__logo" />
+      <span class="brand__name">Proximity</span>
+    </div>
+
+    <div class="footer__links">
+        <a href="mailto:contact@proximityapp.fr">Contact</a>
+        <a href="./mentions-legales.html">Mentions légales</a>
+        <a href="https://www.instagram.com/proximity_appli/">Instagram</a>
+        <a href="./politique-confidentialite.html">Politique de confidentialité</a>
+    </div>
+  </div>
+</footer>
+<!-- Cookie Banner -->
+<div id="cookie-banner" class="cookie-banner">
+    <p>
+      Nous utilisons des cookies pour mesurer l’audience du site.
+      Vous pouvez accepter ou refuser ces cookies.
+    </p>
+    <div class="cookie-actions">
+      <button id="accept-cookies" class="btn btn--primary">Accepter</button>
+      <button id="reject-cookies" class="btn btn--secondary">Refuser</button>
+    </div>
+  </div>
+  
+  <script>
+    const GA_ID = "G-3DR1FRPE4X"; // <-- Mets ton vrai ID ici
+  
+    function loadAnalytics() {
+      const script1 = document.createElement("script");
+      script1.async = true;
+      script1.src = `https://www.googletagmanager.com/gtag/js?id=${GA_ID}`;
+      document.head.appendChild(script1);
+  
+      const script2 = document.createElement("script");
+      script2.innerHTML = `
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', '${GA_ID}');
+      `;
+      document.head.appendChild(script2);
+    }
+  
+    const banner = document.getElementById("cookie-banner");
+    const acceptBtn = document.getElementById("accept-cookies");
+    const rejectBtn = document.getElementById("reject-cookies");
+  
+    const consent = localStorage.getItem("cookie-consent");
+  
+    if (consent === "accepted") {
+      loadAnalytics();
+      banner.style.display = "none";
+    } else if (consent === "rejected") {
+      banner.style.display = "none";
+    }
+  
+    acceptBtn.addEventListener("click", () => {
+      localStorage.setItem("cookie-consent", "accepted");
+      loadAnalytics();
+      banner.style.display = "none";
+    });
+  
+    rejectBtn.addEventListener("click", () => {
+      localStorage.setItem("cookie-consent", "rejected");
+      banner.style.display = "none";
+    });
+  </script>
+</body>
+</html>

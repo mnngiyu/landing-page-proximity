@@ -1,0 +1,14 @@
+body{
+    
+    background-image:url("./assets/images/hero-proximity-3.png");
+    background-repeat:no-repeat;
+    background-position:right top;
+    background-size:contain;
+  }
+  
+  @media (max-width: 768px){
+    body{
+      background-image:url("./assets/images/hero-proximity-mobile.png");
+      
+    }
+  }
