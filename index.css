@@ -11,10 +11,29 @@ body{
       background-image:url("./assets/images/hero-proximity-mobile.png");
       
     }
-    @media (max-width: 450px){
+    @media (max-width: 670px){
+        body{
+          background-image:url("./assets/images/hero-proximity-mobile2.png");
+          
+        }
+    
+    @media (max-width: 570px){
+            body{
+              background-image:url("./assets/images/hero-proximity-mobile3.png");
+              
+            }
+            @media (max-width: 525px){
+                body{
+                  background-image:url("./assets/images/hero-proximity-mobile4.png");
+                  
+                }
+    @media (max-width: 470px){
         body{
           background-image: none;
           
         }
   }
   }
+}
+  }
+}
