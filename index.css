@@ -11,4 +11,10 @@ body{
       background-image:url("./assets/images/hero-proximity-mobile.png");
       
     }
+    @media (max-width: 450px){
+        body{
+          background-image: none;
+          
+        }
+  }
   }

@@ -24,11 +24,12 @@
     <link rel="stylesheet" href="./index.css">
   </head>
 
+
   <body>
     <!-- Header -->
     <header class="header">
       <div class="container header__inner">
-        <a class="brand" href="#">
+        <a class="brand" href="./index.html">
           <img
             src="./assets/images/logo.svg"
             alt="Logo Proximity"
@@ -36,8 +37,14 @@
           />
           <span class="brand__name">Proximity</span>
         </a>
-
-        <nav class="nav">
+    
+        <button class="burger" id="burger-button" aria-label="Ouvrir le menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+    
+        <nav class="nav" id="mobile-nav">
           <a href="#features">Fonctionnalités</a>
           <a href="#newsletter">Pré-lancement</a>
           <a href="./abonnements.html">Abonnements</a>
@@ -133,7 +140,7 @@
           <div class="local__text">
             <h2>Une app pensée pour la vraie vie</h2>
             <p class="lead">
-              Proximity met en avant les commerces de quartier, avec une
+              Proximity met en avant les commerces locaux, avec une
               expérience fluide et humaine, ancrée dans la vie locale.
             </p>
             
@@ -587,5 +594,17 @@
         banner.style.display = "none";
       });
     </script>
+
+<script>
+  const burgerButton = document.getElementById("burger-button");
+  const mobileNav = document.getElementById("mobile-nav");
+
+  burgerButton.addEventListener("click", () => {
+    mobileNav.classList.toggle("nav--open");
+
+    const isOpen = mobileNav.classList.contains("nav--open");
+    burgerButton.setAttribute("aria-expanded", isOpen);
+  });
+</script>
   </body>
 </html>
