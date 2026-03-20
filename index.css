@@ -29,10 +29,18 @@ body{
                 }
     @media (max-width: 470px){
         body{
-          background-image: none;
+          background-image: url("./assets/images/hero-proximity-mobile5.png");
+          
           
         }
   }
+  @media (max-width: 460px){
+    body{
+      background-image: none;
+      
+      
+    }
+}
   }
 }
   }

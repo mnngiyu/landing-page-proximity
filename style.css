@@ -717,9 +717,10 @@ input[type="email"]:focus{
 @media (max-width:470px){
   .lead{
     color:#2B2B2B;
-    max-width: 500px;
+    max-width: 340px;
   }
 }
+
 
 @media (max-width:450px){
   .footer__links{
