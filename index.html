@@ -20,7 +20,6 @@
               rel="stylesheet"
               href="https://sibforms.com/forms/end-form/build/sib-styles.css"
             />
-    <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href="./index.css">
   </head>
 
@@ -46,7 +45,6 @@
     
         <nav class="nav" id="mobile-nav">
           <a href="#features">Fonctionnalités</a>
-          <a href="#newsletter">Pré-lancement</a>
           <a href="./abonnements.html">Abonnements</a>
           <a href="./faq.html">FAQ</a>
         </nav>
@@ -55,35 +53,68 @@
 
     <!-- Hero -->
     <main>
-      <section class="hero">
-        <div class="hero__bg"></div>
+<!-- Hero -->
+<section class="hero">
+  <div class="container hero__inner">
+    <div class="hero__content">
+      <p class="hero__badge">
+        <span></span>
+        L’application est disponible !
+      </p>
 
-        <div class="container hero__inner">
-          <div class="hero__content">
-            <p class="pill">Dans toute la France • Disponible en Mai 2026</p>
-            <h1>Réservez, achetez et<br> soutenez vos<br> commerçants  en un clic</h1>
-            <p class="lead">
-              Proximity simplifie la mise en relation locale : carte
-              interactive, prise de rendez-vous, click & collect et fiches
-              commerçants claires.
-            </p>
+      <h1>
+        Trouvez vos commerces<br />
+        locaux autour de vous
+      </h1>
 
-            <div class="hero__actions">
-              <a class="btn btn--primary" href="#newsletter"
-                >Être informé du lancement</a
-              >
-            </div>
+      <p class="hero__lead">
+        Proximity vous connecte avec les commerçants près de chez vous :
+        carte interactive, prise de rendez-vous, click & collect et bien plus encore.
+      </p>
 
-            <div class="trust">
-              <div class="trust__item">🔔 Notification push</div>
-              <div class="trust__item">🔒 Paiement sécurisé</div>
-              <div class="trust__item">🧩 Carte modifiable</div>
-            </div>
-          </div>
+      <div class="hero__stores">
+        <a href="https://apps.apple.com/fr/app/proximity-paca/id6769840136" class="store-button" aria-label="Télécharger sur l’App Store">
+          <img
+            src="./assets/images/app-store.svg"
+            alt="Télécharger sur l’App Store"
+          />
+        </a>
 
-          
+        <a href="https://play.google.com/store/apps/details?id=fr.proximityapp" class="store-button" aria-label="Disponible sur Google Play">
+          <img
+            src="./assets/images/google-play.svg"
+            alt="Disponible sur Google Play"
+          />
+        </a>
+      </div>
+
+      <div class="hero__trust">
+        <div class="hero__trust-item">
+          <span>🔔</span>
+          Notification push
         </div>
-      </section>
+
+        <div class="hero__trust-item">
+          <span>🔒</span>
+          Paiement sécurisé
+        </div>
+
+        <div class="hero__trust-item">
+          <span>🧩</span>
+          Carte interactive
+        </div>
+      </div>
+    </div>
+
+    <div class="hero__visual">
+      <img
+        src="./assets/images/hero-phone.png"
+        alt="Découvrez les commerces autour de vous avec Proximity"
+        class="hero__phone"
+      />
+    </div>
+  </div>
+</section>
 
       <!-- Features -->
       <section class="section" id="features">
@@ -131,422 +162,255 @@
         </div>
       </section>
 
-<!-- Parcours utilisateur commerçant -->
+<!-- Parcours commerçant -->
 <section class="section section--journey" id="journey">
   <div class="container">
+
     <div class="section__head journey__head">
       <h2>Votre parcours commerçant avec Proximity</h2>
+
       <p class="muted">
-        Une mise en place simple, pensée pour vous faire gagner du temps et développer votre visibilité locale.
+        Une mise en place simple, pensée pour vous faire gagner du temps
+        et développer votre visibilité locale.
       </p>
     </div>
 
+
     <div class="journey">
+
       <!-- Étape 1 -->
-      <div class="journey__text">
-        <p class="journey__step">Étape 1</p>
-        <h3>Inscription rapide et sécurisée</h3>
-        <p>
-          Créez votre compte en quelques instants grâce à un parcours simple, fluide et rassurant, conçu pour vous permettre de démarrer sans difficulté.
-        </p>
-      </div>
-      <div class="journey__media">
-        <img src="./assets/images/image1.png" alt="Illustration inscription rapide et sécurisée" />
-      </div>
+      <article class="journey__card">
+
+        <div class="journey__media">
+          <img
+            src="./assets/images/image1.png"
+            alt="Inscription d'un commerçant sur Proximity"
+          />
+        </div>
+
+        <div class="journey__content">
+
+          <p class="journey__step">
+            Étape 1
+          </p>
+
+          <h3>
+            Inscription rapide et sécurisée
+          </h3>
+
+          <p>
+            Créez votre compte en quelques instants grâce à un parcours
+            simple et fluide, conçu pour vous permettre de démarrer
+            facilement.
+          </p>
+
+        </div>
+
+      </article>
+
 
       <!-- Étape 2 -->
-      <div class="journey__media">
-        <img src="./assets/images/image2.png" alt="Illustration création de vitrine commerçant" />
-      </div>
-      <div class="journey__text">
-        <p class="journey__step">Étape 2</p>
-        <h3>Création de votre vitrine</h3>
-        <p>
-          Présentez votre commerce, vos informations essentielles et votre univers en quelques clics pour offrir une vitrine claire et attractive à vos clients.
-        </p>
-      </div>
+      <article class="journey__card">
+
+        <div class="journey__media">
+          <img
+            src="./assets/images/image2.png"
+            alt="Création de la vitrine d'un commerce sur Proximity"
+          />
+        </div>
+
+        <div class="journey__content">
+
+          <p class="journey__step">
+            Étape 2
+          </p>
+
+          <h3>
+            Création de votre vitrine
+          </h3>
+
+          <p>
+            Présentez votre commerce, vos informations essentielles
+            et votre univers pour offrir une vitrine claire et attractive
+            à vos clients.
+          </p>
+
+        </div>
+
+      </article>
+
 
       <!-- Étape 3 -->
-      <div class="journey__text">
-        <p class="journey__step">Étape 3</p>
-        <h3>Ajout de vos produits et services</h3>
-        <p>
-          Mettez en avant ce que vous proposez : produits, prestations, disponibilités ou spécialités. Votre offre devient visible facilement sur l’application.
-        </p>
-      </div>
-      <div class="journey__media">
-        <img src="./assets/images/image3.png" alt="Illustration ajout de produits et services" />
-      </div>
+      <article class="journey__card">
+
+        <div class="journey__media">
+          <img
+            src="./assets/images/image3.png"
+            alt="Ajout de produits et services sur Proximity"
+          />
+        </div>
+
+        <div class="journey__content">
+
+          <p class="journey__step">
+            Étape 3
+          </p>
+
+          <h3>
+            Ajout de vos produits et services
+          </h3>
+
+          <p>
+            Mettez en avant vos produits, prestations et spécialités
+            afin de rendre votre offre facilement accessible
+            depuis l’application.
+          </p>
+
+        </div>
+
+      </article>
+
 
       <!-- Étape 4 -->
-      <div class="journey__media">
-        <img src="./assets/images/image4.png" alt="Illustration gestion des commandes et rendez-vous" />
-      </div>
-      <div class="journey__text">
-        <p class="journey__step">Étape 4</p>
-        <h3>Gestion de vos commandes et rendez-vous</h3>
-        <p>
-          Centralisez vos demandes, suivez vos commandes et organisez vos rendez-vous plus simplement pour mieux gérer votre activité au quotidien.
-        </p>
-      </div>
+      <article class="journey__card">
+
+        <div class="journey__media">
+          <img
+            src="./assets/images/image4.png"
+            alt="Gestion des commandes et rendez-vous sur Proximity"
+          />
+        </div>
+
+        <div class="journey__content">
+
+          <p class="journey__step">
+            Étape 4
+          </p>
+
+          <h3>
+            Gestion de vos commandes et rendez-vous
+          </h3>
+
+          <p>
+            Centralisez vos demandes, suivez vos commandes et organisez
+            vos rendez-vous plus simplement depuis Proximity.
+          </p>
+
+        </div>
+
+      </article>
+
     </div>
+
   </div>
 </section>
 
       <!-- Newsletter -->
-      <section class="section" id="newsletter">
+      <section class="section section--download" id="download">
         <div class="container">
-          <div class="newsletter">
-            <div class="newsletter__head">
-              <h2>Proximity arrive bientôt</h2>
-              <p class="muted">
-                Inscrivez-vous pour être prévenu dès le lancement. Promis, pas
-                de spam.
+          <div class="download-banner">
+      
+            <div class="download-banner__visual">
+              <img
+                src="./assets/images/download-phone.png"
+                alt="Application Proximity"
+                class="download-banner__image"
+              />
+            </div>
+      
+            <div class="download-banner__content">
+              <h2>Proximity est disponible!</h2>
+      
+              <p>
+                Retrouvez les commerces autour de vous, prenez rendez-vous,
+                commandez et soutenez le commerce local depuis l’application.
+              </p>
+      
+              
+      
+              <div class="download-banner__stores">
+                <a href="https://apps.apple.com/fr/app/proximity-paca/id6769840136" class="store-button">
+                  <img
+                    src="./assets/images/app-store.svg"
+                    alt="Télécharger sur l’App Store"
+                  />
+                </a>
+      
+                <a href="https://play.google.com/store/apps/details?id=fr.proximityapp" class="store-button">
+                  <img
+                    src="./assets/images/google-play.svg"
+                    alt="Disponible sur Google Play"
+                  />
+                </a>
+              </div>
+            </div>
+      
+            <div class="download-banner__annotation">
+              <p>
+                Ensemble,<br />
+                soutenons le commerce<br />
+                local ! ♡
               </p>
             </div>
-
-            
-            
-            <!--  END - We recommend to place the above code in head tag of your website html -->
-
-            <!-- START - We recommend to place the below code where you want the form in your website html  -->
-            
-              <div id="sib-form-container" class="sib-form-container">
-                <div
-                  id="error-message"
-                  class="sib-form-message-panel"
-                  style="
-                    font-size: 16px;
-                    text-align: left;
-                    font-family: Helvetica, sans-serif;
-                    color: #661d1d;
-                    background-color: #ffeded;
-                    border-radius: 3px;
-                    border-color: #ff4949;
-                    max-width: 540px;
-                  "
-                >
-                  <div
-                    class="sib-form-message-panel__text sib-form-message-panel__text--center"
-                  >
-                    <svg
-                      viewBox="0 0 512 512"
-                      class="sib-icon sib-notification__icon"
-                    >
-                      <path
-                        d="M256 40c118.621 0 216 96.075 216 216 0 119.291-96.61 216-216 216-119.244 0-216-96.562-216-216 0-119.203 96.602-216 216-216m0-32C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm-11.49 120h22.979c6.823 0 12.274 5.682 11.99 12.5l-7 168c-.268 6.428-5.556 11.5-11.99 11.5h-8.979c-6.433 0-11.722-5.073-11.99-11.5l-7-168c-.283-6.818 5.167-12.5 11.99-12.5zM256 340c-15.464 0-28 12.536-28 28s12.536 28 28 28 28-12.536 28-28-12.536-28-28-28z"
-                      />
-                    </svg>
-                    <span class="sib-form-message-panel__inner-text">
-                      Nous n'avons pas pu confirmer votre inscription.
-                    </span>
-                  </div>
-                </div>
-                <div></div>
-                <div
-                  id="success-message"
-                  class="sib-form-message-panel"
-                  style="
-                    font-size: 16px;
-                    text-align: left;
-                    font-family: Helvetica, sans-serif;
-                    color: #085229;
-                    background-color: #e7faf0;
-                    border-radius: 3px;
-                    border-color: #13ce66;
-                    max-width: 540px;
-                  "
-                >
-                  <div
-                    class="sib-form-message-panel__text sib-form-message-panel__text--center"
-                  >
-                    <svg
-                      viewBox="0 0 512 512"
-                      class="sib-icon sib-notification__icon"
-                    >
-                      <path
-                        d="M256 8C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm0 464c-118.664 0-216-96.055-216-216 0-118.663 96.055-216 216-216 118.664 0 216 96.055 216 216 0 118.663-96.055 216-216 216zm141.63-274.961L217.15 376.071c-4.705 4.667-12.303 4.637-16.97-.068l-85.878-86.572c-4.667-4.705-4.637-12.303.068-16.97l8.52-8.451c4.705-4.667 12.303-4.637 16.97.068l68.976 69.533 163.441-162.13c4.705-4.667 12.303-4.637 16.97.068l8.451 8.52c4.668 4.705 4.637 12.303-.068 16.97z"
-                      />
-                    </svg>
-                    <span class="sib-form-message-panel__inner-text">
-                      Votre inscription est confirmée.
-                    </span>
-                  </div>
-                </div>
-                <div></div>
-                <div
-                  id="sib-container"
-                  class="sib-container--large sib-container--vertical"
-                  style="
-                    text-align: center;
-                    background-color: rgba(255, 255, 255, 1);
-                    max-width: 540px;
-                    border-radius: 3px;
-                    border-width: 1px;
-                    border-color: #c0ccd9;
-                    border-style: solid;
-                    direction: ltr;
-                  "
-                >
-                  <form
-                    id="sib-form"
-                    method="POST"
-                    action="https://75ba2c4b.sibforms.com/serve/MUIFAJLIQ8PVr9G4Y5MblTadgY85WFx8xsqGu5iCmsjVki7GarSu8EVhMCg23RGO3WQKycdvkEDEjaA54DWH9fLvDu5nytPb1vD7OVKE6HdOPTCEznqa3ykrF3KZV8M7v097IruJJPDmKXD9Mee1eYnWCVKsD3b7feLWtgShNeFO1ymqqc7Y_h9DARZ4Xzso89z6w9xS4NjF5yEn_g=="
-                    data-type="subscription"
-                  >
-                    
-                    <div style="padding: 8px 0">
-                      <div class="sib-input sib-form-block">
-                        <div class="form__entry entry_block">
-                          <div class="form__label-row">
-                            <label
-                              class="entry__label"
-                              style="
-                                font-weight: 700;
-                                text-align: left;
-                                font-size: 16px;
-                                text-align: left;
-                                font-weight: 700;
-                                font-family: Helvetica, sans-serif;
-                                color: #3c4858;
-                              "
-                              for="EMAIL"
-                              data-required="*"
-                              >Email</label
-                            >
-
-                            <div class="entry__field">
-                              <input
-                                class="input"
-                                type="text"
-                                id="EMAIL"
-                                name="EMAIL"
-                                autocomplete="off"
-                                placeholder="ex. : abc@xyz.co"
-                                data-required="true"
-                                required
-                              />
-                            </div>
-                          </div>
-
-                          <label
-                            class="entry__error entry__error--primary"
-                            style="
-                              font-size: 16px;
-                              text-align: left;
-                              font-family: Helvetica, sans-serif;
-                              color: #661d1d;
-                              background-color: #ffeded;
-                              border-radius: 3px;
-                              border-color: #ff4949;
-                            "
-                          >
-                          </label>
-                        </div>
-                      </div>
-                    </div>
-                    <div style="padding: 8px 0">
-                      <div
-                        class="sib-optin sib-form-block"
-                        data-required="true"
-                      >
-                        <div class="form__entry entry_mcq">
-                          <div class="form__label-row">
-                            <div class="entry__choice" >
-                              <label>
-                                <input
-                                  type="checkbox"
-                                  class="input_replaced"
-                                  value="1"
-                                  id="OPT_IN"
-                                  name="OPT_IN"
-                                  required
-                                />
-                                <span
-                                  class="checkbox checkbox_tick_positive"
-                                  
-                                ></span
-                                ><span
-                                  style="
-                                    font-size: 14px;
-                                    text-align: left;
-                                    font-family: Helvetica, sans-serif;
-                                    color: #3c4858;
-                                    background-color: transparent;
-                                  "
-                                  ><p>
-                                    J'accepte de recevoir vos e-mails et
-                                    confirme avoir pris connaissance de votre
-                                    politique de confidentialité et mentions
-                                    légales.
-                                  </p>
-                                  <span
-                                    data-required="*"
-                                    style="display: inline"
-                                    class="entry__label entry__label_optin"
-                                  ></span
-                                ></span>
-                              </label>
-                            </div>
-                          </div>
-                          <label
-                            class="entry__error entry__error--primary"
-                            style="
-                              font-size: 16px;
-                              text-align: left;
-                              font-family: Helvetica, sans-serif;
-                              color: #661d1d;
-                              background-color: #ffeded;
-                              border-radius: 3px;
-                              border-color: #ff4949;
-                            "
-                          >
-                          </label>
-                          <label
-                            class="entry__specification"
-                            style="
-                              font-size: 12px;
-                              text-align: left;
-                              font-family: Helvetica, sans-serif;
-                              color: #8390a4;
-                              text-align: left;
-                            "
-                          >
-                            Vous pouvez vous désinscrire à tout moment en
-                            cliquant sur le lien présent dans nos emails.
-                          </label>
-                        </div>
-                      </div>
-                    </div>
-                    <div style="padding: 8px 0">
-                      <div class="sib-form-block" style="text-align: left">
-                        <button
-                          class="sib-form-block__button sib-form-block__button-with-loader"
-                          style="
-                            font-size: 16px;
-                            text-align: left;
-                            font-weight: 700;
-                            font-family: Helvetica, sans-serif;
-                            color: #ffffff;
-                            background-color: #3e4857;
-                            border-radius: 15px;
-                            border-width: 0px;
-                          "
-                          form="sib-form"
-                          type="submit"
-                        >
-                          <svg
-                            class="icon clickable__icon progress-indicator__icon sib-hide-loader-icon"
-                            viewBox="0 0 512 512"
-                          >
-                            <path
-                              d="M460.116 373.846l-20.823-12.022c-5.541-3.199-7.54-10.159-4.663-15.874 30.137-59.886 28.343-131.652-5.386-189.946-33.641-58.394-94.896-95.833-161.827-99.676C261.028 55.961 256 50.751 256 44.352V20.309c0-6.904 5.808-12.337 12.703-11.982 83.556 4.306 160.163 50.864 202.11 123.677 42.063 72.696 44.079 162.316 6.031 236.832-3.14 6.148-10.75 8.461-16.728 5.01z"
-                            />
-                          </svg>
-                          ME PRÉVENIR
-                        </button>
-                      </div>
-                    </div>
-
-                    <input
-                      type="text"
-                      name="email_address_check"
-                      value=""
-                      class="input--hidden"
-                    />
-                    <input type="hidden" name="locale" value="fr" />
-                  </form>
-                  <p class="brevo-legal">
-                    En vous inscrivant, vous confirmez avoir lu la
-                    <a href="./politique-confidentialite.html">politique de confidentialité</a>
-                    et les
-                    <a href="./mentions-legales.html">mentions légales</a>.
-                  </p>
-                </div>
-              </div>
-            
-            <!-- END - We recommend to place the above code where you want the form in your website html  -->
-
-            <!-- START - We recommend to place the below code in footer or bottom of your website html  -->
-            <script>
-              window.REQUIRED_CODE_ERROR_MESSAGE =
-                "Veuillez choisir un code pays";
-              window.LOCALE = "fr";
-              window.EMAIL_INVALID_MESSAGE = window.SMS_INVALID_MESSAGE =
-                "Les informations que vous avez fournies ne sont pas valides. Veuillez vérifier le format du champ et réessayer.";
-
-              window.REQUIRED_ERROR_MESSAGE =
-                "Vous devez renseigner ce champ. ";
-
-              window.GENERIC_INVALID_MESSAGE =
-                "Les informations que vous avez fournies ne sont pas valides. Veuillez vérifier le format du champ et réessayer.";
-
-              window.translation = {
-                common: {
-                  selectedList: "{quantity} liste sélectionnée",
-                  selectedLists: "{quantity} listes sélectionnées",
-                  selectedOption: "{quantity} sélectionné",
-                  selectedOptions: "{quantity} sélectionnés",
-                },
-              };
-
-              var AUTOHIDE = Boolean(0);
-            </script>
-
-            <script
-              defer
-              src="https://sibforms.com/forms/end-form/build/main.js"
-            ></script>
-
-            <!-- END - We recommend to place the above code in footer or bottom of your website html  -->
-            <!-- End Brevo Form -->
-
-            
+      
           </div>
         </div>
       </section>
-
       <!-- FAQ -->
       <section class="section" id="faq">
         <div class="container">
           <div class="section__head">
             <h2>Questions fréquentes</h2>
-            <p class="muted">Tout ce qu’il faut savoir avant le lancement.</p>
+            <p class="muted">
+              L’essentiel pour découvrir et utiliser Proximity.
+            </p>
           </div>
-
+      
           <div class="faq">
             <details class="faq__item" open>
-              <summary>Quand l’application sera-t-elle disponible ?</summary>
+              <summary>Qu’est-ce que Proximity ?</summary>
               <p>
-                Nous finalisons le lancement, l'application sera disponible en Mai 2026. Inscrivez-vous et vous serez
-                prévenu(e) en priorité.
+                Proximity est une application qui vous permet de découvrir les
+                commerces autour de vous, consulter leurs informations, prendre
+                rendez-vous et utiliser le Click & Collect lorsque ces services
+                sont proposés par le commerçant.
               </p>
             </details>
-
+      
             <details class="faq__item">
-              <summary>Dans quelles villes Proximity sera disponible ?</summary>
+              <summary>L’application est-elle gratuite pour les particuliers ?</summary>
               <p>
-                Proximity sera disponible dans toute la France dès le lancement.
+                Oui. Les particuliers peuvent télécharger Proximity, rechercher
+                des commerces et consulter leurs fiches gratuitement.
               </p>
             </details>
-
+      
             <details class="faq__item">
-              <summary>Est-ce gratuit pour les utilisateurs ?</summary>
+              <summary>Comment un commerçant peut-il rejoindre Proximity ?</summary>
               <p>
-                Oui, l’accès et la découverte des commerces sont gratuits pour
-                les utilisateurs.
+                Les commerçants peuvent créer leur profil directement depuis
+                l’application. Plusieurs formules sont disponibles, dont une
+                vitrine gratuite, une formule sans abonnement avec commission
+                sur les ventes et un abonnement avec 0 % de commission.
+                <a href="./abonnements.html">Découvrir les formules</a>
               </p>
             </details>
-
+      
             <details class="faq__item">
-              <summary>
-                Comment un commerçant peut-il rejoindre Proximity ?
-              </summary>
+              <summary>Proximity prend-il une commission sur les ventes ?</summary>
               <p>
-                Une page dédiée sera disponible.
-                <a href="#newsletter">Être informé du lancement</a>
+                Cela dépend de la formule choisie par le commerçant.
+                L’abonnement 0 % permet de ne payer aucune commission Proximity
+                sur les ventes. La formule sans abonnement applique une commission
+                de 15 % par vente.
               </p>
             </details>
+          </div>
+      
+          <div class="faq__more">
+            <a class="btn btn--secondary" href="./faq.html">
+              Voir toutes les questions
+            </a>
           </div>
         </div>
       </section>

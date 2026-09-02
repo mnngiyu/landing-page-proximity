@@ -1,146 +1,1026 @@
-/* =========================
-   Abonnements — CSS dédié
-   (ne touche pas au style global)
-   ========================= */
+/* =========================================================
+   PROXIMITY — ABONNEMENTS.CSS
+   Styles globaux + page abonnements
+========================================================= */
 
-/* Section pricing layout */
-.pricing{
-    display:grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap:16px;
-    align-items:stretch;
+
+/* =========================================================
+   VARIABLES
+========================================================= */
+
+:root {
+  --green: #2e7d5a;
+  --green-dark: #123f3e;
+  --green-deep: #0f432b;
+  --green-soft: #e9f4ed;
+  --green-pale: #f2f8f4;
+
+  --orange: #f4a261;
+  --terra: #e76f51;
+
+  --beige: #f8f4ef;
+  --cream: #fff9f3;
+  --warm-bg: #fdf7f3;
+
+  --text: #202020;
+  --text2: #4a4948;
+
+  --border: #e3ded8;
+
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 18px 50px rgba(0, 0, 0, 0.08);
+
+  --radius-lg: 24px;
+  --radius-md: 18px;
+}
+
+
+/* =========================================================
+   RESET / GLOBAL
+========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+
+  font-family: "Poppins", sans-serif;
+
+  color: var(--text);
+  line-height: 1.5;
+
+  background:
+    linear-gradient(
+      180deg,
+      #ffffff 0%,
+      var(--warm-bg) 42%,
+      #ffffff 100%
+    );
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+}
+
+button {
+  font: inherit;
+}
+
+.container {
+  width: min(1100px, 92%);
+  margin: 0 auto;
+}
+
+
+/* =========================================================
+   TYPOGRAPHY
+========================================================= */
+
+h1,
+h2,
+h3 {
+  letter-spacing: -0.3px;
+}
+
+h1 {
+  margin: 0;
+
+  font-weight: 700;
+}
+
+h2 {
+  margin: 0 0 8px;
+
+  color: var(--green-dark);
+
+  font-size: 30px;
+  font-weight: 600;
+}
+
+h3 {
+  font-weight: 600;
+}
+
+p {
+  margin-top: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+.muted {
+  margin: 0;
+
+  color: var(--text2);
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.header {
+  position: sticky;
+
+  top: 0;
+
+  z-index: 1000;
+
+  background: rgba(255, 255, 255, 0.92);
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  border-bottom:
+    1px solid rgba(227, 222, 216, 0.7);
+}
+
+.header__inner {
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 14px 0;
+}
+
+.brand {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  text-decoration: none;
+}
+
+.brand__logo {
+  display: block;
+
+  width: 28px;
+  height: 28px;
+}
+
+.brand__name {
+  color: var(--green-dark);
+
+  font-weight: 700;
+}
+
+.nav {
+  display: flex;
+
+  align-items: center;
+
+  gap: 18px;
+}
+
+.nav a {
+  color: var(--text2);
+
+  font-weight: 600;
+
+  text-decoration: none;
+
+  transition:
+    color 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.nav a:hover {
+  color: var(--green);
+}
+
+
+/* =========================================================
+   BURGER
+========================================================= */
+
+.burger {
+  display: none;
+
+  width: 32px;
+  height: 24px;
+
+  padding: 0;
+
+  border: none;
+
+  background: none;
+
+  cursor: pointer;
+
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.burger span {
+  display: block;
+
+  width: 100%;
+  height: 3px;
+
+  border-radius: 999px;
+
+  background: var(--green-dark);
+}
+
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.btn {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-height: 50px;
+
+  padding: 0 24px;
+
+  border: 1px solid transparent;
+  border-radius: var(--radius-md);
+
+  font-weight: 600;
+
+  text-decoration: none;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    filter 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.btn--primary {
+  background: var(--green);
+
+  color: #ffffff;
+
+  box-shadow: var(--shadow);
+}
+
+.btn--primary:hover {
+  background: #276e4f;
+
+  transform: translateY(-1px);
+}
+
+.btn--secondary {
+  background: #ffffff;
+
+  color: var(--green-dark);
+
+  border-color:
+    rgba(46, 125, 90, 0.22);
+}
+
+.btn--secondary:hover {
+  background: var(--green-soft);
+
+  border-color:
+    rgba(46, 125, 90, 0.35);
+}
+
+
+/* =========================================================
+   SECTIONS
+========================================================= */
+
+.section {
+  padding: 56px 0;
+}
+
+.section__head {
+  margin-bottom: 22px;
+}
+
+
+/* =========================================================
+   PRICING SECTION
+========================================================= */
+
+.pricing-section {
+  padding: 72px 0 82px;
+
+  background:
+    radial-gradient(
+      circle at 50% 0%,
+      rgba(244, 162, 97, 0.07),
+      transparent 38%
+    );
+}
+
+.pricing__head {
+  max-width: 900px;
+
+  margin: 0 auto 54px;
+
+  text-align: center;
+}
+
+.pricing__eyebrow {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  margin: 0 0 20px;
+
+  padding: 8px 18px;
+
+  border-radius: 999px;
+
+  background: var(--green-soft);
+
+  color: var(--green);
+
+  font-size: 14px;
+  font-weight: 700;
+
+  letter-spacing: 1.8px;
+
+  text-transform: uppercase;
+
+  box-shadow:
+    0 4px 16px rgba(46, 125, 90, 0.06);
+}
+
+.pricing__head h1 {
+  color: var(--green-dark);
+
+  font-size: clamp(42px, 5vw, 64px);
+
+  line-height: 1.05;
+
+  letter-spacing: -2px;
+}
+
+.pricing__intro {
+  max-width: 760px;
+
+  margin: 22px auto 0;
+
+  color: #63706c;
+
+  font-size: 19px;
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   PRICING GRID
+========================================================= */
+
+.pricing {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 24px;
+
+  align-items: stretch;
+}
+
+
+/* =========================================================
+   PLAN CARD
+========================================================= */
+
+.plan {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  min-height: 690px;
+
+  padding: 34px 34px 28px;
+
+  background: rgba(255, 255, 255, 0.98);
+
+  border:
+    1.5px solid rgba(46, 125, 90, 0.16);
+
+  border-radius: 28px;
+
+  box-shadow:
+    0 12px 35px rgba(18, 63, 62, 0.055);
+}
+
+.plan--featured {
+  border: 3px solid var(--green);
+
+  box-shadow:
+    0 20px 50px rgba(46, 125, 90, 0.12);
+
+  transform: translateY(-8px);
+}
+
+
+/* =========================================================
+   PLAN BADGE
+========================================================= */
+
+.plan__badge {
+  position: absolute;
+
+  top: -19px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  padding: 10px 26px;
+
+  border-radius: 999px;
+
+  background: var(--green);
+
+  color: #ffffff;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  letter-spacing: 1px;
+
+  text-transform: uppercase;
+
+  white-space: nowrap;
+
+  box-shadow:
+    0 8px 20px rgba(46, 125, 90, 0.14);
+}
+
+
+/* =========================================================
+   PLAN TOP
+========================================================= */
+
+.plan__top {
+  min-height: 205px;
+}
+
+.plan__title {
+  margin: 0 0 6px;
+
+  color: var(--green-dark);
+
+  font-size: 27px;
+  font-weight: 700;
+
+  line-height: 1.2;
+}
+
+.plan__subtitle {
+  margin: 0;
+
+  color: #75827d;
+
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.plan__price {
+  display: flex;
+
+  align-items: baseline;
+
+  gap: 8px;
+
+  margin-top: 42px;
+
+  color: var(--green-dark);
+}
+
+.plan__price span {
+  font-size: 44px;
+  font-weight: 700;
+
+  line-height: 1;
+}
+
+.plan__price small {
+  color: #75827d;
+
+  font-size: 16px;
+  font-weight: 500;
+}
+
+
+/* =========================================================
+   PLAN LIST
+========================================================= */
+
+.plan__list {
+  margin: 0;
+  padding: 0;
+
+  border-top:
+    1px solid rgba(46, 125, 90, 0.12);
+}
+
+.plan__list li {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 13px;
+
+  padding: 17px 0;
+
+  color: #43514d;
+
+  font-size: 16px;
+  line-height: 1.5;
+
+  border-bottom:
+    1px solid rgba(46, 125, 90, 0.1);
+}
+
+.plan__list li:last-child {
+  border-bottom: none;
+}
+
+.plan__check {
+  flex-shrink: 0;
+
+  color: var(--green);
+
+  font-size: 20px;
+  font-weight: 700;
+
+  line-height: 1.2;
+}
+
+.plan__list--strong {
+  color: var(--green-dark) !important;
+}
+
+.plan__list--strong strong {
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   PLAN CTA
+========================================================= */
+
+.plan__cta {
+  width: 100%;
+
+  min-height: 58px;
+
+  margin-top: auto;
+
+  border-radius: 999px;
+
+  font-size: 16px;
+  font-weight: 700;
+
+  text-align: center;
+}
+
+.plan .btn--secondary {
+  background: var(--green-soft);
+
+  color: var(--green-dark);
+
+  border-color: transparent;
+
+  box-shadow: none;
+}
+
+.plan .btn--secondary:hover {
+  background: #dcecdf;
+}
+
+.plan--featured .btn--primary {
+  background: var(--green);
+
+  color: #ffffff;
+
+  box-shadow:
+    0 10px 25px rgba(46, 125, 90, 0.2);
+}
+
+.plan--featured .btn--primary:hover {
+  background: #276e4f;
+}
+
+
+/* =========================================================
+   FAQ PRO
+========================================================= */
+
+#pro-faq {
+  padding-top: 45px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #ffffff 0%,
+      #fbfdfb 100%
+    );
+}
+
+#pro-faq .section__head {
+  text-align: center;
+}
+
+#pro-faq .section__head h2 {
+  color: var(--green-dark);
+}
+
+#pro-faq .faq {
+  max-width: 850px;
+
+  margin: 0 auto;
+}
+
+.faq {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 12px;
+}
+
+.faq__item {
+  padding: 15px 17px;
+
+  background: #ffffff;
+
+  border:
+    1px solid rgba(46, 125, 90, 0.12);
+
+  border-radius: 18px;
+
+  box-shadow:
+    0 6px 18px rgba(18, 63, 62, 0.045);
+}
+
+.faq__item summary {
+  color: var(--green-dark);
+
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+.faq__item p {
+  margin: 10px 0 0;
+
+  color: var(--text2);
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.footer {
+  margin-top: 24px;
+
+  padding: 36px 0;
+
+  color:
+    rgba(255, 255, 255, 0.92);
+
+  background: var(--green-deep);
+}
+
+.footer__inner {
+  display: flex;
+
+  align-items: flex-start;
+  justify-content: space-between;
+
+  flex-wrap: wrap;
+
+  gap: 22px;
+}
+
+.brand--footer .brand__name {
+  color: #ffffff;
+}
+
+.footer__text {
+  max-width: 410px;
+
+  margin: 10px 0 0;
+
+  color:
+    rgba(255, 255, 255, 0.82);
+}
+
+.footer__links {
+  display: flex;
+
+  align-items: flex-start;
+  flex-wrap: wrap;
+
+  gap: 16px;
+}
+
+.footer__links a {
+  color: #ffffff;
+
+  font-weight: 600;
+
+  text-decoration: none;
+}
+
+.footer__links a:hover {
+  opacity: 0.85;
+}
+
+
+/* =========================================================
+   COOKIE BANNER
+========================================================= */
+
+.cookie-banner {
+  position: fixed;
+
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  z-index: 9999;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding: 16px;
+
+  background: #ffffff;
+
+  border-top:
+    1px solid rgba(46, 125, 90, 0.12);
+
+  box-shadow:
+    0 -4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.cookie-banner p {
+  margin: 0;
+
+  color: var(--text2);
+
+  font-size: 14px;
+}
+
+.cookie-actions {
+  display: flex;
+
+  flex-shrink: 0;
+
+  gap: 10px;
+}
+
+
+/* =========================================================
+   TABLETTE
+========================================================= */
+
+@media (max-width: 980px) {
+
+  .pricing-section {
+    padding: 60px 0 70px;
   }
-  
-  /* Card */
-  .plan{
-    background:#fff;
-    border:1px solid rgba(227,222,216,.9);
-    border-radius: var(--radius-lg);
-    padding:20px;
-    box-shadow: var(--shadow);
-    display:flex;
-    flex-direction:column;
+
+  .pricing {
+    grid-template-columns: 1fr;
+
+    max-width: 650px;
+
+    margin: 0 auto;
+
+    gap: 30px;
   }
-  
-  /* Top */
-  .plan__top h3{
-    margin:0 0 8px;
+
+  .plan {
+    min-height: auto;
   }
-  
-  .plan__price{
-    margin:0 0 6px;
-    font-weight:700;
-    color:var(--text);
+
+  .plan--featured {
+    transform: none;
   }
-  
-  .plan__price span{
-    font-size:32px;
-    letter-spacing:-0.3px;
+
+  .plan__top {
+    min-height: auto;
   }
-  
-  .plan__price small{
-    color:var(--text2);
-    font-weight:600;
+
+  .plan__price {
+    margin-top: 30px;
   }
-  
-  /* Labels / badges */
-  .plan__badge{
-    display:inline-flex;
-    align-items:center;
-    gap:8px;
-    padding:8px 12px;
-    border-radius:999px;
-    background: rgba(244,162,97,.18);
-    color:#5c3a20;
-    font-weight:700;
-    width: fit-content;
-    margin-bottom:10px;
+}
+
+
+/* =========================================================
+   MENU MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+  .burger {
+    display: flex;
   }
-  
-  .plan__tag{
-    margin:0;
+
+  .nav {
+    position: absolute;
+
+    top: calc(100% + 8px);
+    right: 0;
+
+    display: none;
+
+    width: min(250px, 90vw);
+
+    padding: 16px;
+
+    flex-direction: column;
+    align-items: stretch;
+
+    gap: 6px;
+
+    background:
+      rgba(255, 255, 255, 0.98);
+
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    border:
+      1px solid rgba(46, 125, 90, 0.12);
+
+    border-radius: 18px;
+
+    box-shadow:
+      0 18px 50px rgba(0, 0, 0, 0.08);
   }
-  
-  /* List */
-  .plan__list{
-    margin:16px 0 0;
-    padding-left:18px;
-    color:var(--text2);
+
+  .nav.nav--open {
+    display: flex;
   }
-  
-  .plan__list li{
-    margin:8px 0;
+
+  .nav a {
+    padding: 9px 10px;
+
+    color: var(--text);
+
+    border-radius: 10px;
   }
-  
-  /* Notes */
-  .plan__note{
-    margin-top:14px;
-    padding:12px 14px;
-    border-radius:18px;
-    background: rgba(248,244,239,.8);
-    border:1px solid rgba(227,222,216,.9);
-    color: var(--text2);
-    font-size:13px;
+
+  .nav a:hover {
+    background: var(--green-soft);
   }
-  
-  /* Featured plan (lancement) */
-  .plan--featured{
-    border-color: rgba(46,125,90,.35);
-    box-shadow: 0 18px 50px rgba(0,0,0,.10);
-    transform: translateY(-6px);
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .container {
+    width: min(92%, 540px);
   }
-  
-  /* CTA full width at bottom */
-  .plan__cta{
-    margin-top:auto;
-    width:100%;
+
+  .pricing-section {
+    padding: 45px 0 55px;
   }
-  
-  /* Mini mock card (hero abonnements) */
-  .mock--card{
-    width:min(340px, 100%);
-    padding:22px;
-    background:#fff;
-    border:1px solid rgba(227,222,216,.9);
-    border-radius:28px;
-    box-shadow: 0 18px 50px rgba(0,0,0,.10);
-    position:relative;
+
+  .pricing__head {
+    margin-bottom: 38px;
   }
-  
-  .mock__title{
-    font-weight:800;
-    font-size:18px;
-    margin-bottom:12px;
+
+  .pricing__eyebrow {
+    margin-bottom: 16px;
+
+    font-size: 12px;
   }
-  
-  .mock__line{
-    height:10px;
-    border-radius:999px;
-    background: rgba(227,222,216,.65);
-    margin:10px 0;
+
+  .pricing__head h1 {
+    font-size: 38px;
+
+    letter-spacing: -1.4px;
   }
-  
-  .mock__line--short{
-    width:65%;
+
+  .pricing__intro {
+    margin-top: 16px;
+
+    font-size: 16px;
   }
-  
-  .mock__badge{
-    position:absolute;
-    top:16px;
-    right:16px;
-    background: rgba(46,125,90,.12);
-    color: var(--green);
-    font-weight:800;
-    padding:8px 12px;
-    border-radius:999px;
+
+  .plan {
+    padding: 30px 24px 24px;
+
+    border-radius: 24px;
   }
-  
-  /* Responsive */
-  @media (max-width: 980px){
-    .pricing{
-      grid-template-columns: 1fr;
-    }
-    .plan--featured{
-      transform:none;
-    }
+
+  .plan__title {
+    font-size: 24px;
   }
+
+  .plan__subtitle {
+    font-size: 15px;
+  }
+
+  .plan__price {
+    margin-top: 28px;
+  }
+
+  .plan__price span {
+    font-size: 40px;
+  }
+
+  .plan__price small {
+    font-size: 15px;
+  }
+
+  .plan__list li {
+    padding: 15px 0;
+
+    font-size: 15px;
+  }
+
+  .plan__badge {
+    top: -16px;
+
+    padding: 8px 20px;
+
+    font-size: 12px;
+  }
+
+  .plan__cta {
+    min-height: 54px;
+
+    margin-top: 22px;
+
+    font-size: 15px;
+  }
+
+  .cookie-banner {
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+}
+
+
+/* =========================================================
+   PETITS MOBILES
+========================================================= */
+
+@media (max-width: 450px) {
+
+  .footer__inner {
+    flex-direction: column;
+  }
+
+  .footer__links {
+    flex-direction: column;
+
+    gap: 10px;
+  }
+
+  .cookie-actions {
+    width: 100%;
+  }
+
+  .cookie-actions .btn {
+    flex: 1;
+  }
+}
