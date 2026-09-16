@@ -304,7 +304,7 @@ li{
   overflow:hidden;
   border:1px solid rgba(227,222,216,.9);
   box-shadow:0 18px 50px rgba(0,0,0,.08);
-  background-image:url("./assets/images/local-scene.png");
+  background-image:url("./assets/images/local-scene.webp");
   background-size:cover;
   background-position:center;
 }
